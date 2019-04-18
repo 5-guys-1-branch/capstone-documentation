@@ -1,0 +1,57 @@
+
+\documentclass[a4paper,11pt]{book}
+
+%
+\input{./config/packages} % import packages from file
+\input{./config/macros}
+
+\geometry{rmargin=2.5cm,lmargin=2.5cm} % set documnet margins to 2.5c
+
+% SRS cover page
+\title{
+  \begin{flushright}
+  \Huge{SOFTWARE REQUIREMENTS\\ SPECIFICATION}\\
+  for\\
+  PROJECT NAME\\
+~\\
+  %\LARGE{Five Guys, One Branch}\\
+ \LARGE{COS301, University of Pretoria, South Africa}\\
+~\\
+  %COS301, University of Pretoria, South Africa
+  Five Guys, One Branch
+  \end{flushright}
+}
+
+% Authors
+\author{
+	Francois Venter (uXXXXXXX)\\ 
+	Brendon van Biljoen (u17011842)\\ 
+	Devon Petrie (uXXXXXXX)\\ 
+	Len Bekker (uXXXXXXX)\\ 
+	Gilad Tabul (uXXXXXXX)\\
+}
+\date{2019}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+\begin{center}
+	This page is intentionally left blank
+\end{center}
+
+\tableofcontents
+
+\input{./revision-history/revision-history}
+
+\mainmatter
+
+%\input{./preface/preface}
+\input{./introduction/intro}
+\input{./overall-description/overall-description}
+\input{./external-interface-requirements/external-interface-requirements}
+\input{./system-features/system-features}
+\input{./nonfunctional-requirements/nonfunctional-requirements}
+\input{./other-requirements/other-requirements}
+
+\end{document}
