@@ -8,7 +8,7 @@ packages, and some useful referencing macros.
 Prerequisites
 -------------
 
-To get up and running easily with LaTeX in general it is goof advice to have
+To get up and running easily with LaTeX in general it is good advice to have
 TeXLive-full and `latexmk` installed. On various Linux OS this can be done
 simply by:
 
