@@ -1,26 +1,44 @@
 \chapter{Introduction}
-
 \section{Purpose}
 The purpose of this document serves to provide an in-depth analysis into the user characteristics, requirements and use cases for an autonomous drone. 
 It will utilize the latest technologies in the industry to detect objects and navigate itself based on the detections. 
 The document includes detailed information regarding the requirements of the project.
 Furthermore it explains how requirements are to be met.
+\newline
+\newline
+The primary aim of the Follow Me Drones System (FMDS) is to provide support to a ranger in the field. The system will identify any dangers in the vicinity 
+of the ranger by identifying that which is possibly undetectable to a human walking in the bush. It will identify the objects threat level to the ranger and notify them of any detections. 
 
 \section{Definitions, Acronyms and Abbreviations}
 
+FMDS - Follow Me Drones System
+
 \section{Project Scope}
-While the drone is surveying, it will periodically take a snapshot of the area for later use in creating a 2D map. Any objects (be it animals, humans or human carriable/wearable items) that are detected by the drone’s object detection software will have their location recorded and a pin will be dropped on the 2D map. This can be used to detect hotspots for animals or even poachers.
+In order to avoid notifying the ranger of himself as a detection, the software will need to be initially trained to know what the ranger looks like. 
+This will be done before take-off. The ranger will place the drone with the camera facing them and start the drone, 
+the drone will identify the ranger in front of it and set the ranger as its primary tracking target.
 \newline
-In order to track the ranger, our software will need to be initially trained to know what the ranger looks like. This will be done before take-off. The ranger will place the drone with the camera facing them and start the drone, the drone will identify the ranger in front of it and set the ranger as its primary tracking target.
 \newline
-Alternatively, the ranger could make use of a wearable beacon. This will allow the drone to continuously know where the ranger is without needing to maintain a visual line of sight. With this method, the drone is able to freely move around and patrol the area around the ranger instead of only being able to look in the ranger’s direct vicinity.
+The movement of the drone will be based on the rangers current location and follow the ranger based on their movements.
+The ranger will make use of a wearable beacon which will communicate with the drone. 
+This will allow the drone to continuously know where the ranger is without needing to maintain a visual line of sight. 
+With this method, the drone is able to freely move around and patrol the area around the ranger instead of only being 
+able to look in the ranger’s direct vicinity.
+\newline
+\newline
+The drone will fly in a pre-defined pattern around the ranger, identifying objects as it goes and performing the notifications.
+At points during the flight patter, the drone will take a snapshot below it for later use in creating a 2D map of the reserve.
+A video of the drones surveillance will be captured during flight and saved onto the drones storage, usage of this will vary based on the users needs.
+Any objects (be it animals, humans or human carriable/wearable items) that are detected by the drone’s object detection software 
+will have their location recorded and a pin will be dropped on the 2D map. This can be used to detect hotspots for animals or even poachers.
+\newline
 \newline
 
 \section{Intended Audience and Reading Suggestions}
 This Software Requirements document is intended for:
 
 \begin{itemize}
-	\item The end users of this project namely GroupElephant, EPI-USE and the COS301 lecturers.
+	\item The end users of this project are namely GroupElephant, EPI-USE and the COS301 lecturers.
 \end{itemize}
 
 %\section{References}

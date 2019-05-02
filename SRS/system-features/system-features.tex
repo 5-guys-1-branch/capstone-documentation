@@ -1,11 +1,28 @@
 \chapter{Specific Requirements}
 
 \section{Functional Requirements}
-\subsection{Subsystem 1}
-
 % \subsection{Stimulus/Response Sequences}
 % $<$List the sequences of user actions and system responses that stimulate the
 % behavior defined for this feature. These will correspond to the dialog elements
 % associated with use cases.$>$
 
-\subsection{Subsystem 2}
+\begin{itemize}
+    \item  [\textbf{R1:}] FMDS must \textbf{detect objects} in the reserve
+    
+    \begin{itemize}
+            \item  [\textbf{R1.1}] NGA must allow the customer to authenticate using \textbf{USSD rails} (SMS system).
+                \begin{itemize}
+                        \item  [\textbf{R1.1.1}] NGA must allow the customer to authenticate using their CPS.
+                        \item  [\textbf{R1.1.2}] NGA must allow the customer to authenticate using an OTP.   
+                \end{itemize}
+            \item  [\textbf{R1.2}] NGA must allow the customer to authenticate using the mobile app.
+        \begin{itemize}
+            \item  [\textbf{R1.2.1}] NGA must allow the customer to authenticate using \textbf{TFA}.
+                \begin{itemize}
+                    \item  [\textbf{R1.2.1.1}] NGA must support facial recognition authentication.
+                    \item  [\textbf{R1.2.1.2}] NGA must support fingerprint authentication.
+                \end{itemize}
+            \item  [\textbf{R1.2.2}] NGA must allow the customer to authenticate with a mixture of TFA and CSP.    
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
