@@ -20,10 +20,13 @@ The drone shall return to the landing pad if it loses a connection to the ranger
 
 \section{Security Requirements}
 The drone shall not store any data and only relay it across systems to ensure that if a drone is lost or stolen no sentitive information can be leaked.
+\newline
 The drone shall only accept commands from an authenticated entity to minimize the risk of hijacking or malicious actions, 
 security procedure will be followed in the event that the drone is unable to receive any commands after a set period (I.e. 30 seconds).
-The ranger shall constantly be sending and receiving communication from the drone across a wireless signal, 
+\newline
+The ranger shall constantly be sending and receiving communication from the drone across a wireless signal,
 therefore all transmitted information will require at least 256-bit encryption to ensure no senstive information is leaked to potential evildoers.
+\newline
 
 \section{Software Quality Attributes}
 $<$Specify any additional quality characteristics for the product that will be
