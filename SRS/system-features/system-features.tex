@@ -1,37 +1,77 @@
-\chapter{System Features}
-$<$This template illustrates organizing the functional requirements for the
-product by system features, the major services provided by the product. You may
-prefer to organize this section by use case, mode of operation, user class,
-object class, functional hierarchy, or combinations of these, whatever makes the
-most logical sense for your product.$>$
+\chapter{Specific Requirements}
 
-\section{System Feature 1}
-$<$Don’t really say “System Feature 1.” State the feature name in just a few
-words.$>$
+\section{Functional Requirements}
+% \subsection{Stimulus/Response Sequences}
+% $<$List the sequences of user actions and system responses that stimulate the
+% behavior defined for this feature. These will correspond to the dialog elements
+% associated with use cases.$>$
+\begin{flushleft}
+\begin{itemize}
+	\item  [\textbf{R1:}] FMDS will \textbf{follow} the ranger
 
-\subsection{Description and Priority}
-$<$Provide a short description of the feature and indicate whether it is of
-High, Medium, or Low priority. You could also include specific priority
-component ratings, such as benefit, penalty, cost, and risk (each rated on a
-relative scale from a low of 1 to a high of 9).$>$
+		\begin{itemize}
+			\item  [\textbf{R1.1}] FMDS will allow the ranger to perform \textbf{initialisation} for the drone.
+				\begin{itemize}
+					\item [\textbf{R1.1.1}] FMDS will allow the ranger to set himself as the validated object.
+					\item [\textbf{R1.1.2}] FMDS will allow the ranger to initialise his beacon. 
+				\end{itemize}
 
-\subsection{Stimulus/Response Sequences}
-$<$List the sequences of user actions and system responses that stimulate the
-behavior defined for this feature. These will correspond to the dialog elements
-associated with use cases.$>$
+			\item  [\textbf{R1.2}] FMDS will allow the ranger to specify a \textbf{flight pattern} for the drone
+				\begin{itemize}
+					\item [\textbf{R1.2.1}] FMDS will detect objects while on its flight path.
+					\item [\textbf{R1.2.2}] FMDS will record live video while on its flight path.
+				\end{itemize}
 
-\subsection{Functional Requirements}
-$<$Itemize the detailed functional requirements associated with this feature.
-These are the software capabilities that must be present in order for the user
-to carry out the services provided by the feature, or to execute the use case.
-Include how the product should respond to anticipated error conditions or
-invalid inputs. Requirements should be concise, complete, unambiguous,
-verifiable, and necessary. Use “TBD” as a placeholder to indicate when necessary
-information is not yet available.$>$
+			\item  [\textbf{R1.3}] FMDS will receive \textbf{location updates} from the rangers beacon.
+				\begin{itemize}
+					\item  [\textbf{R1.3.1}] FMDS will move itself to the new location during its patrol
+				\end{itemize}
+		\end{itemize}
+\end{itemize}
 
-$<$Each requirement should be uniquely identified with a sequence number or a
-meaningful tag of some kind.$>$
+\begin{itemize}
+	\item [\textbf{R2:}] FMDS will \textbf{patrol} the area around the ranger
 
-REQ-1:	REQ-2:
+		\begin{itemize}
+			\item [\textbf{R2.1}] FMDS will patrol by flying in the designated \textbf{flight pattern} around the ranger.
+			\item [\textbf{R2.2}] FMDS will perform \textbf{object detection}.
+				\begin{itemize}
+					\item [\textbf{R2.2.1}] FMDS will drop a pin of the object detected on the 2D map.
+				\end{itemize}
+			\item [\textbf{R2.3}] FMDS will \textbf{record} video footage during it's surveillance.
+			\item [\textbf{R2.4}] FMDS will take \textbf{snapshots} of the reserve during it's surveillance.
+				\begin{itemize}
+					\item [\textbf{R2.4.1}] FMDS will build a 2D map of the reserve.
+				\end{itemize}
+		\end{itemize}
+\end{itemize}
 
-\section{System Feature 2 (and so on)}
+\begin{itemize}
+	\item  [\textbf{R3:}] FMDS will \textbf{detect objects} in the reserve
+
+		\begin{itemize}
+			\item  [\textbf{R3.1}] FMDS will allow the ranger to see a list of \textbf{objects} and their \textbf{locations}.
+		\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+	\item  [\textbf{R4:}] FMDS will build a \textbf{2D map} of the reserve
+
+		\begin{itemize}
+			\item  [\textbf{R4.1}] FMDS will use the snapshots taken to build a 2D map of where it has flown.
+		\end{itemize}
+\end{itemize}
+\end{flushleft}
+
+
+\section{Use Case Diagram}
+
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.35]{./assets/images/uc-diagram-1.jpg}
+		\label{fig: use-case-diagram}
+		\caption{Use Case Diagram}
+	\end{figure}
+
+
+

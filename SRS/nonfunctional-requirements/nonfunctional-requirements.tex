@@ -1,39 +1,43 @@
 \chapter{Other Nonfunctional Requirements}
 
 \section{Performance Requirements}
-$<$If there are performance requirements for the product under various
-circumstances, state them here and explain their rationale, to help the
-developers understand the intent and make suitable design choices. Specify the
-timing relationships for real time systems. Make such requirements as specific
-as possible. You may need to state performance requirements for individual
-functional requirements or features.$>$
+\begin{itemize}
+	\item The drones will be able to communicate with the ranger in less than 3 seconds with notifications or status updates.
+	\item The system will be able to identify objects in less than 2 seconds and notify the ranger if needed.
+	\item The drones will be able to change flight paths before within 2 seconds of spotting an object that it will collide with.
+	\item The drone will be able to process the information and pin it on the map within a 3 second standstil period.
+\end{itemize}
 
 \section{Safety Requirements}
-$<$Specify those requirements that are concerned with possible loss, damage, or
-harm that could result from the use of the product. Define any safeguards or
-actions that must be taken, as well as actions that must be prevented. Refer to
-any external policies or regulations that state safety issues that affect the
-product’s design or use. Define any safety certifications that must be
-satisfied.$>$
+\begin{itemize}
+	\item The drone will take off and land by automated mechanisms to ensure ranger safety.
+	\item The drone will keep a safe distance from the ranger at all times while in the air.
+	\item The drone will ignore further commands and return to the landing pad if the battery falls below a certain level.
+	\item The drone will return to the landing pad if it loses a connection to the ranger to prevent damage to the drone.
+\end{itemize}
 
 \section{Security Requirements}
-$<$Specify any requirements regarding security or privacy issues surrounding use
-of the product or protection of the data used or created by the product. Define
-any user identity authentication requirements. Refer to any external policies or
-regulations containing security issues that affect the product. Define any
-security or privacy certifications that must be satisfied.$>$
+\begin{itemize}
+	\item The drone will encrypt its stored data to ensure that if a drone is lost or stolen no sentitive information can be leaked.
+	\item The drone will only accept commands from an authenticated entity to minimize the risk of hijacking or malicious actions, safety procedure will be followed in the event that the drone is unable to receive any commands after a set period (I.e. 30 seconds).
+	\item The ranger will constantly be sending and receiving communication from the drone across a wireless signal, therefore all transmitted information will require at least 256-bit encryption to ensure no senstive information is leaked to potential evildoers.
+\end{itemize}
 
 \section{Software Quality Attributes}
-$<$Specify any additional quality characteristics for the product that will be
-important to either the customers or the developers. Some to consider are:
-adaptability, availability, correctness, flexibility, interoperability,
-maintainability, portability, reliability, reusability, robustness, testability,
-and usability. Write these to be specific, quantitative, and verifiable when
-possible. At the least, clarify the relative preferences for various attributes,
-such as ease of use over ease of learning.$>$
+\subsection {Reliability}
+\begin{itemize}
+	\item The drone will act out its set programming in an accurate and consistent manner and revert to default behaviour patterns when no instructions received.  
+	\item Ranger inputs received will be processed correctly and then execute in a manner which is expected. Unrecognised inputs or corrupt data received shall be ignored as only valid input is accepted.
+\end{itemize}
 
-\section{Business Rules}
-$<$List any operating principles about the product, such as which individuals or
-roles can perform which functions under specific circumstances. These are not
-functional requirements in themselves, but they may imply certain functional
-requirements to enforce the rules.$>$
+\subsection {Availability}
+\begin{itemize}
+	\item The drone will actively listen to inputs from the ranger even while performing other tasks as commands from the ranger are prioritised. 
+	\item The drone will not be impeded or overloaded by its subsystem's performance demands thus maintaining availability. 
+\end{itemize}
+
+\subsection {Usability}
+\begin{itemize}
+	\item The application will have an intuitive UI with basic commands and modes of operation. Different modes of operations can be activated  by the ranger without requiring futher inputs as its executed autonomously 
+\end{itemize}
+
