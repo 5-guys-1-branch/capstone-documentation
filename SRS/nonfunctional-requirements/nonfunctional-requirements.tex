@@ -9,12 +9,10 @@ as possible. You may need to state performance requirements for individual
 functional requirements or features.$>$
 
 \section{Safety Requirements}
-$<$Specify those requirements that are concerned with possible loss, damage, or
-harm that could result from the use of the product. Define any safeguards or
-actions that must be taken, as well as actions that must be prevented. Refer to
-any external policies or regulations that state safety issues that affect the
-product’s design or use. Define any safety certifications that must be
-satisfied.$>$
+The drone shall take off and land by automated mechanisms to ensure ranger safety.
+The drone shall keep a safe distance from the ranger at all times while in the air.
+The drone shall ignore further commands and return to the landing pad if the battery falls below a certain level.
+The drone shall return to the landingg pad if it loses a connection to the ranger to prevent damage to the drone.
 
 \section{Security Requirements}
 The drone shall not store any data and only relay it across systems to ensure that if a drone is lost or stolen no sentitive information can be leaked.
@@ -22,12 +20,6 @@ The drone shall only accept commands from an authenticated entity to minimize th
 security procedure will be followed in the event that the drone is unable to receive any commands after a set period (I.e. 30 seconds).
 The ranger shall constantly be sending and receiving communication from the drone across a wireless signal, 
 therefore all transmitted information will require at least 256-bit encryption to ensure no senstive information is leaked to potential evildoers.
-
-$<$Specify any requirements regarding security or privacy issues surrounding use
-of the product or protection of the data used or created by the product. Define
-any user identity authentication requirements. Refer to any external policies or
-regulations containing security issues that affect the product. Define any
-security or privacy certifications that must be satisfied.$>$
 
 \section{Software Quality Attributes}
 $<$Specify any additional quality characteristics for the product that will be
