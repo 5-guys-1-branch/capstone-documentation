@@ -6,11 +6,10 @@
 %%% remove Chapter N format
 \titleformat{\chapter}[display]{\normalfont\bfseries}{}{0pt}{\Huge}
 \titlespacing*{\chapter}{0pt}{-30pt}{20pt}
-%%%
 
-
+\begin{document}
 % SRS cover page
-\title{
+\begin{titlepage}
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[scale=0.5]{./assets/images/erp-logo.png}
@@ -29,26 +28,20 @@
 		%COS301, University of Pretoria, South Africa
 		Five Guys, One Branch
 	\end{center}
-}
-
-% Authors
-\author{
-	Francois Venter (u14177553)\\ 
-	Brendon van Biljoen (u17011842)\\ 
-	Devon Petrie (u17019266)\\ 
-	Len Bekker (u11026953)\\ 
-	Gilad Tabul (u16154658)\\
-}
-\date{2019}
-
-\begin{document}
-\frontmatter
-\maketitle
-
-\begin{center}
-	This page is intentionally left blank
-\end{center}
+	% Authors
+	\begin{center}
+		Francois Venter (u14177553)\\ 
+		Brendon van Biljoen (u17011842)\\ 
+		Devon Petrie (u17019266)\\ 
+		Len Bekker (u11026953)\\ 
+		Gilad Tabul (u16154658)\\
+	\end{center}
+	\begin{center}
+		\today
+	\end{center}
+\end{titlepage}
 \let\cleardoublepage\clearpage
+
 \tableofcontents
 
 \input{./revision-history/revision-history}
