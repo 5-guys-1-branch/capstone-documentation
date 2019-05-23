@@ -5,4 +5,26 @@ Once the configuration has been completed, navigate to the interface/ directory 
 \begin{itemize}
     \item[\$] make
     \item[\$] make run
+
 \end{itemize}
+
+\section{Drone Controls}
+If not running a simulation step 1 can be ommited
+\begin{itemize}
+    \item {Optional} Start Dronekit with the command 
+        \newline\textit{\$ dronekit-sitl copter --home=-lat-coords,long-coords,584,353}
+    \item Start MavProxy with the command 
+        \newline \textbf{\textit{\$ mavproxy.py --master tcp:127.0.0.1:5760 --out udp:127.0.0.1:14551 --out udp:10.1.2.100:14550}}
+        \newline --master specifies the IP that the drone commands are supposed to be forward
+        \newline --out specifies the ports that can be accessed 
+    \item Drone Commands after mavproxy is running
+    \begin{itemize}
+        \item This is the command to connect to the dronekit.
+        \item [] \begin{verbatim}   CONNECT_UDP,UDP_PORT\end{verbatim} 
+        \item Disconnects the interface from the drone.
+        \item [] \begin{verbatim}   DISCONNECT_UDP\end{verbatim}
+        \item Sets the destination for the drone to fly to.
+        \item [] \begin{verbatim}   GO_TO_POINT,lat-coords, long-coords\end{verbatim}
+        \item Cancels the current flight and sets the drone to return to base.
+        \item [] \begin{verbatim}   CANCEL_FLIGHT\end{verbatim}
+     \end{itemize}
