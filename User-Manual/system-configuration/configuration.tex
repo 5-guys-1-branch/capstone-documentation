@@ -1,0 +1,34 @@
+\chapter{System Configuration}
+\section{Object Recognition}
+
+\begin{itemize}
+\item \textbf{Configure Makefile}
+
+In the darknet\_ directory, locate the Makefile and change the following lines need to be changed:
+
+\begin{itemize}
+    \item[\textbf{\#}] 89  - \textit{/path/to/cuda/include}
+    \item[\textbf{\#}] 92 - \textit{/path/to/cuda/lib}
+    \item[\textbf{\#}] 94 - \textit{/path/to/cuda/lib64}
+    \item[\textbf{\#}] 101 - \textit{/path/to/usr/local/cuda/include}
+    \item[\textbf{\#}] 102 - \textit{/path/to/usr/local/cuda/lib}
+    \item[\textbf{\#}] 104 - \textit{/path/to/usr/local/cudnn/include}
+    \item[\textbf{\#}] 105 - \textit{/path/to/usr/local/cudnn/lib64}
+\end{itemize}
+
+These lines must reflect the installation folder for cuda and cudnn specific to your device and it's installation folders.
+
+\item \textbf{Configure config file for training}
+
+In the darknet\_/cfg directory, get 300IQ, locate the animals.cfg and change the following lines:
+
+\begin{itemize}
+    \item[\textbf{\#}] 15  - \textit{max\_batches = (classes * 2000)}
+    \item[\textbf{\#}] 17 - \textit{steps = (classes*0.8), (classes*0.9)}
+    \item[\textbf{\#}] 224 - \textit{filters = (classes + 5)*5}
+    \item[\textbf{\#}] 230 - \textit{classes = no. classes}
+\end{itemize}
+
+* Note - Don't actually type in a formula like (classes * 2000). Only type in the value once you've calculated it
+
+\end{itemize}
