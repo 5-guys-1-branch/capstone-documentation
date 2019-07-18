@@ -32,3 +32,38 @@ In the darknet\_/cfg directory, get 300IQ, locate the animals.cfg and change the
 * Note - Don't actually type in a formula like (classes * 2000). Only type in the value once you've calculated it
 
 \end{itemize}
+
+\section{Communication Server \& Jetson Nano}
+
+\begin{itemize}
+\item \textbf{Configure commserver.service file}
+
+In the home directory on your jetson nano create a service file:
+
+\begin{itemize}
+    \item[\$] \textit{touch commserver.service}
+\end{itemize}
+
+Paste the following into the file: 
+
+\fbox{\begin{minipage}{35em}
+    [Unit]
+    Description=LTPS NodeJS Test Application\newline
+    After=network-online.target\newline
+    \newline
+    [Service]\newline
+    Restart=on-failure\newline
+    WorkingDirectory=/home/jetson/Follow-Me-Drones/server\newline
+    ExecStart=/usr/bin/node /home/jetson/Follow-Me-Drones/server/comms.js\newline
+    \newline
+    [Install]\newline
+    WantedBy=multi-user.target\newline
+\end{minipage}}
+
+In the home directory on your jetson nano create a service file:
+
+\begin{itemize}
+    \item[\$] \textit{touch commserver.service}
+\end{itemize}
+
+\end{itemize}
