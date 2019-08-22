@@ -2,9 +2,13 @@
 \section{Object Recognition}
 
 \begin{itemize}
+\item \textbf{Darknet}
+
+Further details on configuring Darknet can be found on the \href{https://github.com/AlexeyAB/darknet}{\textit{github page}} of the fork we used by AlexeyAB.
+
 \item \textbf{Configure Makefile}
 
-In the darknet\_ directory, locate the Makefile and change the following lines need to be changed:
+In the darknet\_ directory, locate the Makefile and change the following lines with reference to your system:
 
 \begin{itemize}
     \item[\textbf{\#}] 89  - \textit{/path/to/cuda/include}
@@ -23,10 +27,13 @@ These lines must reflect the installation folder for cuda and cudnn specific to 
 In the darknet\_/cfg directory, get 300IQ, locate the animals.cfg and change the following lines:
 
 \begin{itemize}
-    \item[\textbf{\#}] 15  - \textit{max\_batches = (classes * 2000)}
-    \item[\textbf{\#}] 17 - \textit{steps = (classes*0.8), (classes*0.9)}
-    \item[\textbf{\#}] 224 - \textit{filters = (classes + 5)*5}
-    \item[\textbf{\#}] 230 - \textit{classes = no. classes}
+    \item Uncomment lines 3 - 6
+    \item Commend out lines 8 - 11
+    \item[\textbf{\#}] 21  - \textit{max\_batches = (classes * 2000)}
+    \item[\textbf{\#}] 23 - \textit{steps = (classes*0.8), (classes*0.9)}
+    \item[\textbf{\#}] 230 - \textit{filters = (classes + 5)*5}
+    \item[\textbf{\#}] 236 - \textit{classes = no. classes}
+    \item[\textbf{\#}] 250 - \textit{random = 0 or 1 to toggle random image editing during training}
 \end{itemize}
 
 * Note - Don't actually type in a formula like (classes * 2000). Only type in the value once you've calculated it
@@ -48,22 +55,23 @@ Paste the following into the file:
 
 \fbox{\begin{minipage}{35em}
     [Unit]
-    Description=LTPS NodeJS Test Application\newline
+    Description=Python Communication Server\newline
     After=network-online.target\newline
     \newline
     [Service]\newline
     Restart=on-failure\newline
     WorkingDirectory=/home/jetson/Follow-Me-Drones/server\newline
-    ExecStart=/usr/bin/node /home/jetson/Follow-Me-Drones/server/comms.js\newline
+    ExecStart=/usr/bin/python3 /home/jetson/Follow-Me-Drones/server/comms.py\newline
     \newline
     [Install]\newline
     WantedBy=multi-user.target\newline
 \end{minipage}}
 
-In the home directory on your jetson nano create a service file:
+Enable the system service and start it.
 
 \begin{itemize}
-    \item[\$] \textit{touch commserver.service}
+    \item[\$] \textit{systemctl enable commserver.service}
+    \item[\$] \textit{systemctl start commserver.service}
 \end{itemize}
 
 \end{itemize}

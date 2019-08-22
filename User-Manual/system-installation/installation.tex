@@ -1,5 +1,13 @@
 \chapter{System Installation}
 
+\section{Jetson Nano (Recommended)}
+\begin{itemize}
+    \item \textbf{Follow the Nvidia guide to setting up your jetson}
+        \begin{itemize}
+            \item \href{https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit}{\textit{\underline{Nvidia Guide}}}
+        \end{itemize}
+\end{itemize}
+
 \section{Object Recognition}
 \begin{itemize}
     \item \textbf{Clone the repository (If not already done)}
@@ -16,14 +24,6 @@
         \end{itemize}
 \end{itemize}
 
-\section{Jetson Nano}
-\begin{itemize}
-    \item \textbf{Follow the Nvidia guide to setting up your jetson}
-        \begin{itemize}
-            \item \href{https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit}{\textit{\underline{Nvidia Guide}}}
-        \end{itemize}
-\end{itemize}
-
 \section{Communcation Server}
 \begin{itemize}
     \item \textbf{Clone the repository (If not already done)}
@@ -36,19 +36,22 @@
         \end{itemize}
     \item \textbf{Install the depenecies}
         \begin{itemize}
-            \item[\$] \textit{npm install}
+            \item[\$] \textit{pip install -r requirements.txt}
         \end{itemize}
+
+        Server code is located within Follow-Me-Drones/server/comms.py. This code can be edited with accordance to \href{https://pypi.org/project/Flask/}{\textit{Flask}} and \href{https://flask-socketio.readthedocs.io/en/latest/}{\textit{Flask-socketio}}.
 \end{itemize}
+
 
 \section{Drone Controls}
 
 \begin{itemize}
     \item \textbf{Pip installations}
         \begin{itemize}
-            \item[\$] \textit{pip install dronekit-silt}
-            \item[\$] \textit{pip install mavproxy} 
+            \item[\$] \textit{pip install pyparrot}
+            \item[\$] \textit{pip install pynput (for keyboard interaction)} 
         \end{itemize}
-        After installing you can just run the interface.
+        After installing these, you can use our example controls in Follow-Me-Drones/server/drone.py or create your by following the documentation of \href{https://pyparrot.readthedocs.io/en/latest/}{\textit{pyparrot}}.
 \end{itemize}
 
 \section{Mobile Application}
