@@ -3,10 +3,8 @@
 \section{Requirements}
 \subsection{Software Requirements}
 
-\subsubsection{Communcation Server}
 \begin{itemize}
-    \item npm
-    \item nodeJS
+    \item Ubuntu running on Jetson device (Nano, TX1, TX2, ...)
 \end{itemize}
 
 \subsubsection{Jetson Nano}
@@ -15,22 +13,11 @@
     \item Wi-fi adapter
     \item DC Power adapter (\href{https://www.docdroid.net/yGXIxZu/data-sheet-nvidia-jetson-tx2-system-on-module.pdf}{\textit{See jetson spec sheet}})
     \item Bridge to complete DC power circuit
-\end{itemize}
 
-\subsubsection{Object Detection \cite{darknet}}
-\begin{itemize}
-    \item cmake
-    \item gcc
-    \item knowledge on how to use a terminal
-\end{itemize}
-
-\subsubsection{Drone Controls}
-\begin{itemize}
-    \item Git
-    \item Python 3 (or Better)
-    \item Pip
-    \item drone-silt (for simulation) \cite{dronekit}
-    \item mavproxy (to transfer commands to drone) \cite{mavproxy}
+    \item \textbf{Follow the Nvidia guide to setting up your jetson}
+        \begin{itemize}
+            \item \href{https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit}{\textit{\underline{Nvidia Guide}}}
+        \end{itemize}
 \end{itemize}
 
 \subsubsection{Mobile Application} 
@@ -40,10 +27,7 @@
 \end{itemize}
 
 \subsection{User Requirements}
-\subsubsection{Object Detection}
-\begin{itemize}
-    \item Knowledge on how to use a terminal
-\end{itemize}
+
 \subsubsection{Jeston Nano}
 \begin{itemize}
     \item Knowledge on linux and how to set up a distribution
