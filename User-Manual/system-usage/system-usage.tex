@@ -1,48 +1,139 @@
-\chapter{System Usage}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
+\chapter{System Usage} \cite{darknet}
 
 \section{Communication Server}
 
-The setup enabled the server to start automatically with the jetson, so after installation be sure to restart your device.
+The setup enabled the server to start automatically with the Jetson, so after installation be sure to restart your device.
 
 \section{ User Application }
-See figure below:
-\begin{figure}[h!]
+\subsection{Drone list page (main page)}
+
+\subsubsection{Drone(s) offline}
+\begin{minipage}[c]{0.5\linewidth}
 	\centering
 	\includegraphics[scale=0.5]{./assets/images/offline.png}
-	\label{fig: screens}
-	\caption{}
-\end{figure}
-\begin{itemize}
-		\item 1. Drone name.
-		\item 2. Drone icon
-		\item 3. Navigate to 'add new drone' page.
-		\item 4. Navigate to drone list tab
-		\item 5. Navigate to flight sessions tab
-		\item 6. Drones list
-		
-\end{itemize}
-\begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.5]{./assets/images/online.png}
-	\label{fig: screens}
-	\caption{}
-\end{figure}
-\newpage
-\begin{itemize}
-		\item 1. Server status online
-		\item 2. Connect to drone/server button
-\end{itemize}
+	\label{fig: mainPageOffline}
+	\captionof{figure}{Figure 1: Drone list page (with offline drones)}
+\end{minipage}
+\begin{minipage}[c]{0.5\linewidth}
+	\begin{itemize}
+		\item (1) Drone name
+		\item (2) Drone icon
+		\item (3) Navigate to 'add new drone' page
+		\item (4) Navigate to drone list tab
+		\item (5) Navigate to flight sessions tab
+		\item (6) Drone list
+	\end{itemize}
+\end{minipage}
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.5]{./assets/images/connected.png}
-	\label{fig: screens}
-	\caption{}
-\end{figure}
 \newpage
-\begin{itemize}
-		\item 1. Disconnect drone button.
-		\item 2. Arm drone button.
-\end{itemize}
+\subsubsection{Drone(s) online}
+\begin{minipage}[c]{0.5\linewidth}
+	\centering
+	\includegraphics[scale=0.4]{./assets/images/online.png}
+	\label{fig: mainPageOnline}
+	\captionof{figure}{Figure 2: Drone list page (with online drones)}
+\end{minipage}
+\begin{minipage}[c]{0.5\linewidth}
+	\begin{itemize}
+			\item (1) Server status (online)
+			\item (2) Connect to drone/server button
+	\end{itemize}
+\end{minipage}
 
+% \rule{\textwidth}{0.005cm}
+
+\subsubsection{Drone(s) online and connected}
+\begin{minipage}[c]{0.5\linewidth}
+	\centering
+	\includegraphics[scale=0.4]{./assets/images/connected.png}
+	\label{fig: mainPageConnected}
+	\captionof{figure}{Figure 3: Drone list page (with online and connected drones)}
+\end{minipage}
+\begin{minipage}[c]{0.5\linewidth}
+	\begin{itemize}
+			\item 1. Disconnect drone button
+			\item 2. Arm drone button
+	\end{itemize}
+\end{minipage}
+
+\newpage
+\subsubsection{Drone(s) connected and armed}
+\begin{minipage}[c]{0.5\linewidth}
+	\centering
+	\includegraphics[scale=0.4]{./assets/images/armed.png}
+	\label{fig: mainPageArmed}
+	\captionof{figure}{Figure 4: Drone list page (with connected and armed drones)}
+\end{minipage}
+\begin{minipage}[c]{0.5\linewidth}
+	\begin{itemize}
+		\item (1) Connection status (connected)
+		\item (2) Armed status button (which disarms drone)
+		\item (3) Notification alerting user of detection from drone
+	\end{itemize}
+\end{minipage}
+
+\subsubsection{Delete an existing drone}
+\begin{minipage}[c]{0.5\linewidth}
+	\centering
+	\includegraphics[scale=0.4]{./assets/images/delete.png}
+	\label{fig: mainPageDeleteDrone}
+	\captionof{figure}{Figure 5: Drone list page (with delete action)}
+\end{minipage}
+\begin{minipage}[c]{0.5\linewidth}
+	\begin{itemize}
+		\item (1) Delete button (which deletes currently selected drone). This button is reached by swiping from Right -> Left on a specific drone.
+	\end{itemize}
+\end{minipage}
+
+\newpage
+\subsubsection{Modify an existing drone's settings}
+\begin{minipage}[c]{0.5\linewidth}
+	\centering
+	\includegraphics[scale=0.4]{./assets/images/settings.png}
+	\label{fig: mainPageAddDrone}
+	\captionof{figure}{Figure 6: Drone list page (with settings action)}
+\end{minipage}
+\begin{minipage}[c]{0.5\linewidth}
+	\begin{itemize}
+		\item (1) Settings button (which navigates to the drone settings menu where the currently selected drone's settings can be modified). This button is reached by swiping from Left -> Right on a specific drone.
+	\end{itemize}
+\end{minipage}
+
+\subsection{Drone settings page}
+\subsubsection{Add a new drone}
+\begin{minipage}[c]{0.5\linewidth}
+	\centering
+	\includegraphics[scale=0.4]{./assets/images/add-new.png}
+	\label{fig: mainPageAddDrone}
+	\captionof{figure}{Figure 7: New drone page}
+\end{minipage}
+\begin{minipage}[c]{0.5\linewidth}
+	\begin{itemize}
+		\item (1) Drone name
+		\item (2) Drone IP address
+		\item (3) Drone connection port
+		\item (4) General comments
+		\item (5) Submit button
+		\item (6) Cancel button (navigate back to drone list page)
+	\end{itemize}
+\end{minipage}
+
+\newpage
+% \subsubsection{Drone(s) connected and armed}
+% \begin{minipage}[c]{0.5\linewidth}
+% 	\centering
+% 	\includegraphics[scale=0.4]{./assets/images/armed.png}
+% 	\label{fig: mainPageArmed}
+% 	\captionof{figure}{Figure 4: Drone list page (with connected and armed drones)}
+% \end{minipage}
+% \begin{minipage}[c]{0.5\linewidth}
+% 	\begin{itemize}
+% 		\item (1) Connection status (connected)
+% 		\item (2) Armed status button (which disarms drone)
+% 		\item (3) Notification alerting user of detection from drone
+% 	\end{itemize}
+% \end{minipage}
 
